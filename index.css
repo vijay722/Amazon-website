@@ -1,0 +1,158 @@
+/* overall the content in html will margin and padding will be zero using a universal selector */
+*{font-family:sans-serif;
+ margin: 0; 
+ padding: 0;
+ box-sizing: border-box;}
+/* the header section will be flex and will be in the center of the page content space around in the header */
+header {width: 100%; 
+    height: 68px; 
+    background-color: #010102; 
+    color: #ffffffee;
+    display: flex; 
+    justify-content:space-around;
+    align-items: center;}
+.header_search{ border-radius: 5px; 
+    display: flex; 
+    width: 40%; 
+    height: 40px;}
+/* img of logo width and height fixed */
+header img { width:8%; 
+    height:100%;}
+/* header_search input,header_search select,header_search button space around the header tag separated inside the header it will be responsive when devices will be changes */
+.header_search input{ width: 100%; 
+    height: 100%; 
+    border: none;}
+.header_search select{height: 40px; 
+    width: 10%; 
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border: none;
+    background-color: rgba(255, 255, 255, 0.897);}
+.header_search button{height: 100%; 
+    width: 10%; 
+    background-color: rgba(230, 169, 57, 0.877); 
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+    border: none;}
+/* it also one of the header bar properties*/
+/* icon arranged properly inside the header and nav bar */
+.header_nav {display: flex; 
+    justify-content: space-between;}
+.nav-order{padding-left: 50px;}
+.fa-shopping-cart{color: #ffffff; 
+    font-size: 26px; 
+    padding-left:50px; 
+    padding-right:30px;}
+.fa-bars{color: #ffffff; 
+    font-size: 16px;}
+.map-tracker_location{font-size: 12px; 
+    padding-left: 27px;}
+nav{display: flex; 
+    flex-direction: row; 
+    background-color:rgb(19, 19, 27);
+    padding: 15px; width: 100%; 
+    position: sticky; 
+    top: 0px;}
+nav p{text-decoration: none; 
+    color: white; 
+    padding-right: 20px;}
+.fa-bars{color: white; 
+    padding-right: 20px;}
+.left_nav{padding-left: 500px;}
+section img{width: 100%; height: 260px;}
+.advertise_grid{width: 100%; 
+    height: 480px; 
+    display: grid; 
+    grid-template-columns:1fr 1fr 1fr 1fr; 
+    column-gap: 50px; 
+    text-align: center; 
+    padding: 50px; 
+    background-color: rgb(247, 243, 235);}
+/* whole content in the advertise_grid color and display the item row but 4 cloumns in the row */
+.item{background-color: white; 
+    text-align: left; 
+    padding-left: 30px; 
+    padding-right: 0px; 
+    padding-top: 20px;
+    font-size: 16px;}
+.item img{width: 90%; 
+    height: 290px;}
+.bold{font-weight: bold;}
+.color{color: rgb(58, 58, 226); 
+    font-weight: bold;}
+/* footer container content will center */
+footer { width: 100%; 
+    background-color: rgb(43, 43, 54); 
+    padding: 15px; 
+    text-align: center;}
+a{text-decoration: none; 
+    color: white;}
+/* footer using grid separated the content in column wise and column gap using padding then align content properly */
+.footer_container{display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    row-gap: 30px; 
+    background-color:rgb(19, 19, 27);
+    color: white;
+    padding: 20px 50px 20px 100px;}
+.footer_container p{font-size: 13px; 
+    line-height: 18px;}
+/* querie for responsive website all the amazone website queries displayed in the mobile view in these properties  */
+@media only screen and (max-width: 600px){
+    body{ height: 300%;}
+    header{ width:  100%; 
+        height: 56px;}
+    .header_nav p { padding-right: 8px; 
+        padding-left: 8px;}
+    .header_search button{ width: 30%;}
+    .header_search input{ border-top-left-radius: 5px; 
+        border-bottom-left-radius: 5px;}
+     header img { width: 22%; 
+        height: 80%;}
+/* using display none properties when comes to responsive all the content in the webpage hidden in the mobile responsive */
+    .map-tracker_details{display: none; }
+    .nav-order{ display: none;}
+    select{ display: none;}
+    nav p{ padding-top: 6px;
+           padding-right: 16px; 
+           font-size: 12px;}
+    nav{padding: 0px; 
+        text-align: center;}
+    .left_nav{display: none;}
+/* icon align and adjust properly for mobile website */
+    .fa-bars{color: white; 
+        padding-right: 20px; 
+        padding-top: 10px; 
+        padding-left: 20px;}
+    .fa-shopping-cart{color: #ffffff; 
+        font-size: 20px; 
+        padding-left:10px; 
+        padding-right:44px;}
+/*  1 column for smaller screens and Adjust rows automatically */
+    .advertise_grid{width: 100%; 
+        height: 100%;
+        display: grid; 
+        grid-template-columns: 1fr;  
+        grid-template-rows: auto; 
+        background-color: rgb(247, 243, 235); 
+        padding: 45px 0px 0px 0px;}
+    .item{width: 100%; 
+        height: 85%; 
+        background-color: white; 
+        text-align: left; 
+        font-size: 16px;}
+    .item img{width:92%; 
+        height: 77%;}
+    
+    section img {width: 100%; 
+        height: 123px;}
+    /* Adjust rows automatically and 1 column for smaller screens */
+    .footer_container{height: 450px; 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        background-color:rgb(19, 19, 27);
+        color: white; 
+        text-align: center; 
+        padding: 10px;}
+    .footer_container p{ font-size: 10px; 
+        line-height: 15px;}
+    .footer_container h5{font-size: 11px;}}
